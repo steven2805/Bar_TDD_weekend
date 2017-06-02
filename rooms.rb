@@ -34,6 +34,9 @@ def deducting_cost_from_guest(customer)
   return customer.wallet -= @entry_fee
 end 
 
+# def checking_the_room_has_fav_song 
+#   if 
+
 
 
 
