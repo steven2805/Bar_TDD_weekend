@@ -17,7 +17,12 @@ class Room
     @occupancy.push(guest)
   end 
 
-  def add_entry_fee_to_room_total_profit 
+  def sign_out_guest(guest)
+    @occupancy.delete(guest)
+  end 
+
+  def 
+    add_entry_fee_to_room_total_profit 
     @entry_fee_total_profit += @entry_fee
   end
 
@@ -25,7 +30,7 @@ class Room
 
 # just clearing the room.
 
-def guest_checks_out
+def clear_out_room
   @occupancy.clear 
 end 
 

@@ -28,10 +28,19 @@ class TestRooms < MiniTest::Test
   def test_adding_guest_to_room
     @room1.add_guest_to_room(@guest1)
     assert_equal(1,@room1.occupancy.length)
+
   end 
 
+  def test_check_guest_has_signed_out 
+    @room1.add_guest_to_room(@guest1)
+    @room1.add_guest_to_room(@guest2)
+    @room1.sign_out_guest(@guest1)
+    assert_equal(1,@room1.occupancy.length)
+  end
+
+
   def test_checking_empty_room 
-    @room1.guest_checks_out
+    @room1.clear_out_room
     assert_equal(0,@room1.occupancy.length)
   end 
 
