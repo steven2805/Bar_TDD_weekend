@@ -18,6 +18,13 @@ class TestRooms < MiniTest::Test
     assert_equal(01,@room1.room_number)
   end
 
+  def test_adding_money_to_the_total_room_profit
+    # @room1.add_guest_to_room(@guest1)
+    @room1.add_entry_fee_to_room_total_profit
+    @room1.add_entry_fee_to_room_total_profit
+    assert_equal(100,@room1.entry_fee_total_profit)
+  end 
+
   def test_adding_guest_to_room
     @room1.add_guest_to_room(@guest1)
     assert_equal(1,@room1.occupancy.length)
