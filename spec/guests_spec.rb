@@ -10,7 +10,7 @@ class TestGuests < MiniTest::Test
   def setup
     @song1 = Songs.new("bob", "ok song", "5:22")
     @guest1 = Guests.new("Sam", 24, 400)
-    @room1 = Room.new(01,nil,@song1,2,50)
+    @room1 = Room.new(01,2,50)
   end 
 
   def test_guest_name 
@@ -26,9 +26,9 @@ class TestGuests < MiniTest::Test
     assert_equal(350, @guest1.wallet)
   end
 
-  def test_checking_which_room_has_favsong
-    assert_equal("ok song",)
-  end 
+  # def test_checking_which_room_has_favsong
+  #   assert_equal("ok song",)
+  # end 
   
 
 end
