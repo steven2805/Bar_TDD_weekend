@@ -21,8 +21,7 @@ class Room
     @occupancy.delete(guest)
   end 
 
-  def 
-    add_entry_fee_to_room_total_profit 
+  def add_entry_fee_to_room_total_profit 
     @entry_fee_total_profit += @entry_fee
   end
 
@@ -46,7 +45,7 @@ def add_song_to_room_playlist(new_song)
   @songs.push(new_song)
 end 
 
-# This only checks to see whether there is an exact matching single song. Searching can be by nmae of song or by name of artist
+# This only checks to see whether there is an exact matching single song. Searching can be by nmae of song or by name of artist.
 
 def checking_the_room_has_a_song(check_song)
   for song in @songs

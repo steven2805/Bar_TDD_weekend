@@ -1,6 +1,6 @@
 class Bar 
 
-  attr_reader(:drinks,:drink2,:drink3,:drink4,:bar_profits)
+  attr_reader(:drinks, :bar_profits)
 
   def initialize
     @drinks = {}
